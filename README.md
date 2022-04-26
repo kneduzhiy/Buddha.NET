@@ -3,9 +3,9 @@
 
 Structure
 ------
-Buddha.NET/ - Main project (class library) containing the implementation
-Buddha.NET.AspNetCore/ - Tools for using Buddha.NET with ASP.NET Core (currently only convenience, BuddhaController)
-Buddha.NET.Demo/ - Demo ASP.NET Core Web API project implementing the Mediator pattern with Buddha.NET
+- Buddha.NET/ - Main project (class library) containing the implementation
+- Buddha.NET.AspNetCore/ - Tools for using Buddha.NET with ASP.NET Core (currently only convenience, BuddhaController)
+- Buddha.NET.Demo/ - Demo ASP.NET Core Web API project implementing the Mediator pattern with Buddha.NET
 
 Usage
 ------
