@@ -4,6 +4,9 @@ namespace Buddha.NET
 {
     public class Response<TResponse> where TResponse : class
     {
+        [JsonIgnore]
+        public int HttpStatusCode { get; set; } = 200;
+
         public bool Success { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

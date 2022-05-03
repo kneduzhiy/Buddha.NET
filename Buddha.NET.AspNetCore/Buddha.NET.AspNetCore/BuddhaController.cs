@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 
 namespace Buddha.NET.AspNetCore
 {
+    [ProducesResponseType(200)]
+    [ProducesResponseType(400, Type = typeof(ErrorData))]
     public class BuddhaController : ControllerBase
     {
         protected Buddha Buddha { get; }
@@ -17,7 +19,7 @@ namespace Buddha.NET.AspNetCore
             where TResponse : class
         {
             var result = await Buddha.HandleCommand<TCommand, TRequest, TResponse>(request);
-            return Ok(result);
+            return StatusCode(result.HttpStatusCode, result);
         }
     }
 }

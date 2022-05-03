@@ -1,4 +1,5 @@
 ﻿using Buddha.NET.Demo.Services;
+using System.Threading.Tasks;
 
 namespace Buddha.NET.Demo.Actions.MarkTodoDone
 {
@@ -12,9 +13,9 @@ namespace Buddha.NET.Demo.Actions.MarkTodoDone
             TodoService = todoService;
         }
 
-        public override Response<MarkTodoDoneResponse> Handle(MarkTodoDoneRequest request)
+        public override async Task<Response<MarkTodoDoneResponse>> HandleAsync(MarkTodoDoneRequest request)
         {
-            var validationResult = Validator.Validate(request);
+            var validationResult = await Validator.Validate(request);
             if (validationResult.ValidationFailed)
             {
                 return Validator.GenerateErrorResponse<MarkTodoDoneResponse>(validationResult.FailedValidationItems);

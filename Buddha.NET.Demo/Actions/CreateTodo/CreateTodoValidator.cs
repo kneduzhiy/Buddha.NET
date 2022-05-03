@@ -7,7 +7,7 @@ namespace Buddha.NET.Demo.Actions.CreateTodo
     {
         protected override IList<ValidationConstraint<CreateTodoRequest>> Constraints => new List<ValidationConstraint<CreateTodoRequest>>
         {
-            new ValidationConstraint<CreateTodoRequest>(_ => !string.IsNullOrEmpty(_.Name), _ => "Name was empty")
+            new ValidationConstraint<CreateTodoRequest>(async _ => !string.IsNullOrEmpty(_.Name), _ => "Name was empty")
         };
     }
 }

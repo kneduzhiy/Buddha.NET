@@ -2,11 +2,31 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Kirill Neduzhiy</Authors>
+    <Company>Kirill Neduzhiy</Company>
+    <Product />
+    <Copyright>(c) 2022 by Kirill Neduzhiy</Copyright>
+    <PackageProjectUrl>https://github.com/kneduzhiy/Buddha.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kneduzhiy/Buddha.NET</RepositoryUrl>
+    <PackageTags>Mediator, mediatr, buddha, buddhanet, buddha.net</PackageTags>
+    <Description>Buddha.NET is a framework/implementation based on the Mediator pattern for C# and ASP.NET Core including validation and DI</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>buddha-nuget-icon.png</PackageIcon>
+    <PackageIconUrl />
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\buddha-nuget-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

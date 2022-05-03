@@ -1,5 +1,6 @@
 ﻿using Buddha.NET.Demo.Model;
 using Buddha.NET.Demo.Services;
+using System.Threading.Tasks;
 
 namespace Buddha.NET.Demo.Actions.CreateTodo
 {
@@ -13,9 +14,9 @@ namespace Buddha.NET.Demo.Actions.CreateTodo
             Validator = new CreateTodoValidator();
         }
 
-        public override Response<CreateTodoResponse> Handle(CreateTodoRequest request)
+        public override async Task<Response<CreateTodoResponse>> HandleAsync(CreateTodoRequest request)
         {
-            var validationResult = Validator.Validate(request);
+            var validationResult = await Validator.Validate(request);
             if (validationResult.ValidationFailed)
             {
                 return Validator.GenerateErrorResponse<CreateTodoResponse>(validationResult.FailedValidationItems);

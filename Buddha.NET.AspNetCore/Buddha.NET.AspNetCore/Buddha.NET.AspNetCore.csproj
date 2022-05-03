@@ -2,10 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Kirill Neduzhiy</Authors>
+    <Description>ASP.NET Core tools and extensions for Buddha.NET</Description>
+    <Copyright>(c) 2022 by Kirill Neduzhiy</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>buddha-nuget-icon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/kneduzhiy/Buddha.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/kneduzhiy/Buddha.NET</PackageProjectUrl>
+    <PackageTags>asp.net core, asp.net, asp mediatr, asp mediator, buddha asp, buddha.net asp, Mediator, mediatr, buddha, buddhanet, buddha.net</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Buddha.NET" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\buddha-nuget-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
